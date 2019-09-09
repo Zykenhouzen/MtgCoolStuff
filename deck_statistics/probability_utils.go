@@ -17,3 +17,18 @@ func ChanceToDraw(cardNameList []string, deck Deck) float64 {
 
 	return float64(totalFound)/float64(total)
 }
+
+func ChanceToDrawEach(deck Deck) map[string]float64 {
+	probabilityToDrawPerCard := map[string]float64{}
+	var total int
+
+	for _, amount := range deck {
+		total += amount
+	}
+
+	for deckIndex, amount := range deck {
+		 probabilityToDrawPerCard[deckIndex] = float64(amount)/float64(total)
+	}
+
+	return probabilityToDrawPerCard
+}
