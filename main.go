@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"./models"
 	"./deck_statistics"
 )
 
@@ -12,7 +11,7 @@ func main() {
 	// 	Name: "Forest",
 	// 	Type: "Land"}}
 
-	startingDeck := models.Deck{
+	startingDeck := deck_statistics.Deck{
 		"Forest": 30,
 		"Island": 10,
 	}

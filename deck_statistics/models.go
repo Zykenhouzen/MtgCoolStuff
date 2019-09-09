@@ -1,4 +1,4 @@
-package models
+package deck_statistics
 
 type Deck map[string]int
 
