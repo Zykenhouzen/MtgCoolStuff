@@ -8,12 +8,12 @@ import (
 func TestChanceToDraw(t *testing.T) {
     tests := map[string]struct {
         cards []string
-        deck  Deck
+        deck  CardBag
         want  float64
     }{
         "1 card out of 2":  {
             cards: []string{"Forest"},
-            deck: Deck{
+            deck: CardBag{
         		"Forest": 30,
         		"Island": 10,
         	},
@@ -34,11 +34,11 @@ func TestChanceToDraw(t *testing.T) {
 func TestChanceToDrawEach(t *testing.T) {
     tests := map[string]struct {
         cards []string
-        deck  Deck
+        deck  CardBag
         want  map[string]float64
     }{
         "1 card out of 2":  {
-            deck: Deck{
+            deck: CardBag{
         		"Forest": 30,
         		"Island": 10,
         	},

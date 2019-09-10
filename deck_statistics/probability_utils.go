@@ -2,7 +2,7 @@ package deck_statistics
 
 // send in a list of cards and a deck of cards
 // returns the chance that you will draw one of the listed cards from the deck
-func ChanceToDraw(cardNameList []string, deck Deck) float64 {
+func ChanceToDraw(cardNameList []string, deck CardBag) float64 {
 	var totalFound, total int
 
 	for _, name := range cardNameList {
@@ -18,7 +18,7 @@ func ChanceToDraw(cardNameList []string, deck Deck) float64 {
 	return float64(totalFound)/float64(total)
 }
 
-func ChanceToDrawEach(deck Deck) map[string]float64 {
+func ChanceToDrawEach(deck CardBag) map[string]float64 {
 	probabilityToDrawPerCard := map[string]float64{}
 	var total int
 

@@ -11,7 +11,7 @@ func main() {
 	// 	Name: "Forest",
 	// 	Type: "Land"}}
 
-	startingDeck := deck_statistics.Deck{
+	startingDeck := deck_statistics.CardBag{
 		"Forest": 30,
 		"Island": 10,
 	}

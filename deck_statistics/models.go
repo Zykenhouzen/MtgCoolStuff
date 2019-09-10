@@ -1,6 +1,6 @@
 package deck_statistics
 
-type Deck map[string]int
+type CardBag map[string]int
 
 type CardMap map[string]Card
 
